@@ -2,10 +2,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Stencil Component Starter</title>
-<script src='https://unpkg.com/sch-test-stencil@0.0.3/dist/mycomponent.js'></script>
+<script src='https://unpkg.com/sch-test-stencil@0.0.4/dist/mycomponent.js'></script>
 </head>
 <body>
-
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-
-</body></html>
+<p>Testing nested component</p>
+<my-component text="Developer Console Header" url="https://developer.schibsted.io/"/>
+<script>
+  document.addEventListener('goToDevCon', function (e) {
+    const item = e.target;
+    window.location = item.getAttribute('url');
+  })
+</script>
+</body>
+</html>
